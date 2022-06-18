@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title%}mips detector{% endblock %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>MIPS Pipelining Hazards Detector</h1>
+    <form action="{{ url_for('.submit') }}" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Write your code here:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="code"></textarea>
+          </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
