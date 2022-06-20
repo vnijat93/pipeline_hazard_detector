@@ -13,5 +13,7 @@ def index():
 
 @main.route('/submit', methods=['POST'])
 def submit():
-    print(request.form["code"])
-    return render_template('result.html')
+    results, column_count = process_instructions(request.form["code"])
+    return render_template(
+        'results.html', results=results, column_count=column_count
+        )
