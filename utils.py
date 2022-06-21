@@ -71,7 +71,7 @@ def generate_sequence(cur_ins, pre_seq, forwarding):
         if opcode == 'sw':
             stall_cycles = get_stall_cycles(src_reg_1, src_reg_2, dest_reg)
         else:
-            stall_cycles = get_stall_cycles(src_reg_1, src_reg_2)
+            stall_cycles = get_stall_cycles(src_reg_1, src_reg_2, dest_reg)
         sequence += ['S'] * stall_cycles
         sequence += ["ID", "EX", "ME", "WB"]
 
